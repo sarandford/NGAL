@@ -1,0 +1,2 @@
+class CupboardController < ApplicationController
+end
