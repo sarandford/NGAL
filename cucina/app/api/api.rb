@@ -1,8 +1,8 @@
-require 'food/data'
+require 'v1/data'
 
 module API
 	class Base < Grape::API
-		mount Food::Data
+		mount V1::Data
 	end
 end
 
