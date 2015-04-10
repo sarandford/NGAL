@@ -1,5 +1,5 @@
 class CupboardsController < ApplicationController
-	def home 
-		puts "THIS IS A TEST"
+	def index 
+		render
 	end
 end
