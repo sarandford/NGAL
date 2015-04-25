@@ -89,8 +89,6 @@ GEM
       rack-accept
       rack-mount
       virtus (>= 1.0.0)
-    haml (4.0.6)
-      tilt
     hashie (3.4.0)
     hike (1.2.3)
     i18n (0.7.0)
@@ -200,13 +198,12 @@ PLATFORMS
 
 DEPENDENCIES
   autoprefixer-rails
-  bootstrap-sass (~> 3.2.0)
+  bootstrap-sass
   byebug
   coffee-rails (~> 4.1.0)
   devise
   faker
   grape
-  haml
   jbuilder (~> 2.0)
   jquery-rails
   mysql2
