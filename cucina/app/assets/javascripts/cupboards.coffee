@@ -1,8 +1,9 @@
 $ ->
 	$(document).on "click", "cupboard_button", ->
-		$.ajax
-			type: 'GET'
-			url: '/cupboards'
+		console.log "HERE"
+		$("cupboard_display_area").html("")
+
+
 
 
 
