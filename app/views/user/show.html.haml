@@ -1,0 +1,11 @@
+%h1.text-center Cucina
+.text-center
+  %button#cupboard_button.btn.btn-success Cupboard
+  %button#recipe_button.btn.btn-success Recipes
+  %button#shopping_list_button.btn.btn-success Shopping List
+#cupboard_display_area.text-left
+  = render "cupboards/index", locals: {cupboard: @cupboard}
+#recipe_display_button.text-center
+#shopping_list_button.text-right
+
+

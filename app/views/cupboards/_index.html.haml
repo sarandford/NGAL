@@ -1,0 +1,4 @@
+.list-group.col-md-2.text-center
+  - @cupboard.each do |cupboard_item|
+    %a.list-group-item.active{:href => "#"}
+      = cupboard_item
