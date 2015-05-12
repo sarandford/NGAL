@@ -1,0 +1,13 @@
+<h1 class = "text-center">Cucina</h1>
+<div class = "text-center">
+	<button id = "cupboard_button" class = "btn btn-success" >Cupboard</button>
+	<button id = "recipe_button" class = "btn btn-success">Recipes</button>
+	<button id = "shopping_list_button" class = "btn btn-success">Shopping List</button>
+</div>
+<div class = "text-left" id = "cupboard_display_area">
+	<%= render "cupboards/index", locals: {cupboard: @cupboard} %>
+</div>
+<div class = "text-center" id = "recipe_display_button"></div>
+<div class = "text-right" id = "shopping_list_button"></div>
+
+
