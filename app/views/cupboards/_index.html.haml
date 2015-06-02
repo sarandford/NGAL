@@ -1,4 +1,9 @@
-.list-group.col-md-2.text-center
-  - @cupboard.each do |cupboard_item|
-    %a.list-group-item.active{:href => "#"}
-      = cupboard_item
+.input-group.food_groups_area
+  %input.form-control.typeahead#food_input{:placeholder => "I have...", :type => "text"}
+  %btn.btn-lg.btn-success.glyphicon.glyphicon-plus.food_add_buttons#food_add_button
+.food_list
+  - Cupboard.where(user_id: current_user).each do |item|
+    .item
+      %input{type: 'checkbox', value: item.id }=item.food.name
+ 
+

@@ -28,6 +28,7 @@ gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
 gem 'bundler'
 gem 'haml'
+gem 'twitter-typeahead-rails'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
