@@ -5,6 +5,11 @@ Rails.application.routes.draw do
   mount API::Base => '/'  
   resources :cupboards
   resources :food
+  resources :grocery_lists do 
+    collection do
+      post 'add_to_cupboard'
+    end
+  end
   root 'user#show'
 
   

@@ -16,6 +16,7 @@
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require cupboards
+//= require grocery_lists
 //= require twitter/typeahead
 //= require twitter/typeahead.min
 //= require_tree .

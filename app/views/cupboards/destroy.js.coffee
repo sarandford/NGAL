@@ -1,1 +1,2 @@
-console.log "these need to disappear"
+$("input[name='cupboard_item']:checked").each ->
+	$(this).parent('div').remove()
