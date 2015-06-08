@@ -1,7 +1,8 @@
 class CupboardsController < ApplicationController
 	respond_to :json, :html, :js
-	def index 
+	def index
 		@foods = Cupboard.where(user_id: current_user.id)
+		render 
 	end
 
 	def create

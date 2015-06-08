@@ -9,8 +9,7 @@ $ ->
 			displayKey: 'food',
 			source: food.ttAdapter()})
 
-	$(document).on "click", "#cupboard_button", ->
-		$("#cupboard_display_area").toggle()
+
 
 	$(document).on "click", "#recipe_button", ->
 		$("#recipe_display_area").toggle()

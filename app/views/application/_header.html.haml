@@ -1,0 +1,6 @@
+.header 
+	.col-xs-6.text-left
+		%img#logo_header{src: "/images/CucinaImage.png", alt: "rss feed"}
+	.col-xs-6.text-right
+		= link_to 'Logout', destroy_user_session_path(), {method: 'delete', class: "btn home_buttons", id: 'sign_out_button', type: 'button'}
+

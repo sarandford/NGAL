@@ -1,23 +1,12 @@
-%h1.text-center Cucina
+%h1.text-center 
+	%img#logo{src: "/images/CucinaImage.png", alt: "rss feed"}
 .row.text-center
-	.col-md-4
-		%button#cupboard_button.btn.btn-primary Have
-		.row
-			#cupboard_display_area{hidden: true}
-				= render "cupboards/index", locals: {cupboard: @cupboard}
-	.col-md-4
-		%button#grocery_list_button.btn.btn-warning Need
-		.row
-			#grocery_list_display_area{hidden: true}
-				= render "grocery_lists/show"
-	.col-md-4
-		%button#recipe_button.btn.btn-success Cook
-		.row
-			#recipe_display_area{hidden: true}
-				.row.text-center
-					= render "recipes/search"
-				.row.text-center
-					= render "recipes/browse"
+	= link_to "Have", cupboards_path(), {class: 'btn btn-default home_buttons', id: 'cupboard_button', type: 'button'}	
+.row.text-center
+	= link_to "Need", grocery_lists_path(), {method: 'post', class: 'btn btn-default home_buttons', id: 'grocery_list_button', type: 'button'}
+.row.text-center	
+	= link_to "Cook", recipebooks_path(), {class: 'btn btn-default home_buttons', id: 'recipe_button', type: 'button'}
+
 
 
 
