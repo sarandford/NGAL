@@ -14,6 +14,9 @@ class GroceryListsController < ApplicationController
 			@grocery_list = GroceryList.create(user_id: current_user.id, food_id: @food.id)
 		end
 	end
+	def index
+		render "create"
+	end
 
 	def destroy
 		GroceryList.delete(params[:items_to_delete])

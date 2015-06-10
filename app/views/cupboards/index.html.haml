@@ -1,7 +1,7 @@
 .col-md-12.text-center
-	.input-group.food_groups_area
+	.food_input.input-group
 		%input.form-control.text-center#food_input{:placeholder => "I have...", :type => "text"}
-		%btn.btn-lg.btn-success.glyphicon.glyphicon-plus.food_add_buttons#food_add_button
+		%span.input-group-addon.glyphicon.glyphicon-plus.food_add_buttons#food_add_button
 	.food_list
 		- Cupboard.where(user_id: current_user).each do |item|
 			.cupboard_items

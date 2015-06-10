@@ -1,16 +1,4 @@
 $ ->
-	$(document).ready ->
-		food = new Bloodhound({datumTokenizer: Bloodhound.tokenizers.obj.whitespace('food'),queryTokenizer: Bloodhound.tokenizers.whitespace, local: [{ dairy: 'milk' },
-			{ food: 'eggs' },
-			{ food: 'cheese' },
-			{ food: 'yogurt'}]})
-		food.initialize()
-		$('.typeahead#food_input').typeahead(null, {
-			displayKey: 'food',
-			source: food.ttAdapter()})
-
-
-
 	$(document).on "click", "#recipe_button", ->
 		$("#recipe_display_area").toggle()
 
@@ -25,7 +13,6 @@ $ ->
 			url: "/cupboards"
 			data: data
 	$(document).on "click", "#delete_from_cupboard_button", ->
-		console.log "HEREREREERE"
 		selected = []
 		$("input[name='cupboard_item']:checked").each ->
 			selected.push ($(this).val())

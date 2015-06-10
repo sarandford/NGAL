@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
 
   devise_for :users
+  resources :user
   mount API::Base => '/'  
   resources :cupboards
   resources :food

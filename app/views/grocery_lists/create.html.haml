@@ -1,10 +1,11 @@
-.input-group.grocery_list_items
-	%input.form-control.typeahead#grocery_list_input{:placeholder => "I need...", :type => "text"}
-	%btn.btn-lg.btn-success.glyphicon.glyphicon-plus#grocery_list_add_button
-.grocery_list
-	- GroceryList.where(user_id: current_user).each do |item|
-		.grocery_list_item
-			%input{type: 'checkbox', name: 'grocery_list_item', value: item.id }=item.food.name
-.grocery_list_buttons
-	%btn.btn-primary.btn-sm#add_to_cupboard_button Bought it
-	%btn.btn-warning.btn-sm#delete_from_grocery_list_button Don't Actually Need It
+.col-md-12.text-center
+	.input-group.grocery_list_items
+		%input.form-control.typeahead#grocery_list_input{:placeholder => "I need...", :type => "text"}
+		%span.input-group-addon.btn.glyphicon.glyphicon-plus#grocery_list_add_button
+	.grocery_list
+		- GroceryList.where(user_id: current_user).each do |item|
+			.grocery_list_item
+				%input{type: 'checkbox', name: 'grocery_list_item', value: item.id }=item.food.name
+	.grocery_list_buttons
+		%button.btn#add_to_cupboard_button Bought it
+		%button.btn#delete_from_grocery_list_button Don't Actually Need It
