@@ -1,4 +1,5 @@
 class RecipesController < ApplicationController
+	before_filter :allow_iframe_requests
 
 	def index 
 		@ingredients = Cupboard.where(user_id: current_user.id)
@@ -19,5 +20,8 @@ class RecipesController < ApplicationController
 			container += "#{word.food.name},"
 		end
 		return container
+	end
+	def allow_iframe_requests
+  		response.headers.delete('X-Frame-Options')
 	end
 end
