@@ -1,6 +1,6 @@
 .header.cucina_home
 	.col-xs-1.text-left
-		=link_to image_tag("/images/CucinaImage.png"), user_path((current_user.id.nil? ? 1 : current_user.id)), {method: 'get'}
+		=link_to image_tag("/images/CucinaImage.png"), user_path((current_user.nil? ? 1 : current_user.id)), {method: 'get'}
 	.col-xs-3.text-center
 		= link_to "Have", cupboards_path(), {class: 'btn btn-default home_buttons', id: 'cupboard_button', type: 'button'}	
 	.col-xs-3.text-center
