@@ -8,6 +8,7 @@ class GroceryListsController < ApplicationController
 				@grocery_list_items << GroceryList.create(user_id: current_user.id, food_id: Cupboard.find(id).food.id)
 				Cupboard.delete(id)
 			end
+			render "cupboards/destroy"
 		else
 			@add_from_cupboard = false
 			@food = ((Food.where(name: params[:name]).empty?) ? Food.create(name: params[:name]) : Food.where(name: params[:name]).first)

@@ -6,13 +6,21 @@ Rails.application.routes.draw do
   mount API::Base => '/'  
   resources :cupboards
   resources :food
-  resources :recipes
+
+  resources :recipes do 
+    collection do
+      get 'search'
+    end
+  end
+
   resources :recipebooks
+
   resources :grocery_lists do 
     collection do
       post 'add_to_cupboard'
     end
   end
+  
   root 'user#show'
 
   

@@ -1,10 +1,4 @@
 $ ->
-	$(document).on "click", "#recipe_button", ->
-		$("#recipe_display_area").toggle()
-
-	$(document).on "click", "#grocery_list_button", ->
-		$("#grocery_list_display_area").toggle()
-
 	$(document).on "click","#food_add_button", ->
 		dairy_product = $("#food_input").val()
 		data = name: dairy_product

@@ -1,3 +1,8 @@
-.recipe_area.text-center
-	- @urls.each do |url|
-		%iframe{src: "#{url}", scrolling: "yes", width: 500, height: 500}
+.potential_ingredients_area.text-center What do you want to use? 
+-@ingredients.each do |item|
+	.row.text-center
+		%input{type: 'checkbox', name: 'cupboard_item_to_search', value: item.id }=item.food.name
+.row.text-center
+	%button.btn.home_buttons#search_button Search
+.search_results
+
