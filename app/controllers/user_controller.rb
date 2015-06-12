@@ -5,4 +5,8 @@ class UserController < ApplicationController
 		@cupboard = @cupboard.map { |e| Food.find(e.food_id).name  }
 		render
 	end 
+
+	def sign_in
+		render
+	end
 end

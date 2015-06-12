@@ -1,0 +1,3 @@
+.recipe_area.text-center
+	- @urls.each do |url|
+		%iframe{src: "#{url}", scrolling: "yes", width: 500, height: 500}
