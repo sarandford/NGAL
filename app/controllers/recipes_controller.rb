@@ -13,8 +13,8 @@ class RecipesController < ApplicationController
 		puts @ingredients.inspect
 		@urls = []
 		response = RestClient.get "http://food2fork.com/api/search?key=c3c2406305ef3e33c68210f57d5f0719&q=#{@ingredients}"
-		puts response.inspect
 		response = eval(response)
+		puts response.inspect
 		for item in response[:recipes] do
 			@urls << item[:source_url]
 		end
