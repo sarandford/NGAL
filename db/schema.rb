@@ -28,6 +28,8 @@ ActiveRecord::Schema.define(version: 20150516234839) do
   end
 
   create_table "grocery_lists", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "food_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
