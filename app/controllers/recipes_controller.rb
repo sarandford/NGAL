@@ -12,7 +12,7 @@ class RecipesController < ApplicationController
 		@ingredients = to_comma_seperated_string(@ingredients)
 		puts @ingredients.inspect
 		@urls = []
-		response = RestClient.get "http://food2fork.com/api/search?key=c3c2406305ef3e33c68210f57d5f0719&q=#{@ingredients}"
+		response = RestClient.get "http://food2fork.com/api/search?key=c3c2406305ef3e33c68210f57d5f0719&q=#{@ingredients}&count=10"
 		response = JSON.parse response
 		puts response.inspect
 		for item in response["recipes"] do

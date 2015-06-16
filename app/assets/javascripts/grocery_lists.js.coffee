@@ -1,11 +1,13 @@
 $ ->
 	$(document).on "click","#grocery_list_add_button", ->
+		console.log "HERE"
 		item = $("#grocery_list_input").val()
 		data = name: item
 		$.ajax
 			type: 'POST'
 			url: "/grocery_lists"
 			data: data
+
 	$(document).on "click", "#add_to_cupboard_button", ->
 		selected = []
 		$("input[name='grocery_list_item']:checked").each ->
