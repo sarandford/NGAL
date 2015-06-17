@@ -18,6 +18,7 @@ class RecipesController < ApplicationController
 		for item in response["recipes"] do
 			@urls << item["source_url"]
 		end
+		render
 	end
 
 	private 

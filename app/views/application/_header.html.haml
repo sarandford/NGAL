@@ -1,12 +1,13 @@
 .header.cucina_home
-	.col-xs-1.text-left
-		=link_to "Home", user_path((current_user.nil? ? 1 : current_user.id)), {class: 'btn btn-default home_buttons', id: 'home_button', method: 'get'}
-	.col-xs-3.text-center
-		= link_to "Have", cupboards_path(), {class: 'btn btn-default home_buttons', id: 'cupboard_button', type: 'button'}	
-	.col-xs-3.text-center
-		= link_to "Need", grocery_lists_path(), {method: 'get', class: 'btn btn-default home_buttons', id: 'grocery_list_button', type: 'button'}
-	.col-xs-3.text-center
-		= link_to "Cook", recipes_path(), {method: 'get', class: 'btn btn-default home_buttons', id: 'recipe_button', type: 'button'}
-	.col-xs-2.text-right
-		= link_to 'Logout', destroy_user_session_path(), {method: 'delete', class: "btn home_buttons", id: 'sign_out_button', type: 'button'}
+	.row
+		.col-xs-1.text-left
+			=link_to "Home", user_path((current_user.nil? ? 1 : current_user.id)), {class: 'btn btn-default home_buttons', id: 'home_button', method: 'get'}
+		.col-xs-3.text-center
+			= link_to "Have", cupboards_path(), {class: 'btn  home_buttons', id: 'cupboard_button', type: 'button'}	
+		.col-xs-3.text-center
+			= link_to "Need", grocery_lists_path(), {method: 'get', class: 'btn  home_buttons', id: 'grocery_list_button', type: 'button'}
+		.col-xs-3.text-center
+			= link_to "Cook", recipes_path(), {method: 'get', class: 'btn  home_buttons', id: 'recipe_button', type: 'button'}
+		.col-xs-2.text-right
+			= link_to 'Logout', destroy_user_session_path(), {method: 'delete', class: "btn home_buttons", id: 'sign_out_button', type: 'button'}
 
