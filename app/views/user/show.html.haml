@@ -1,11 +1,21 @@
 %h1.text-center 
 	%img#logo{src: "/images/cucina2.png", alt: "rss feed"}
-.row.text-center
-	= link_to "Have", cupboards_path(), {class: 'btn btn-default home_buttons', id: 'cupboard_button', type: 'button'}	
-.row.text-center
-	= link_to "Need", grocery_lists_path(), {method: 'post', class: 'btn btn-default home_buttons', id: 'grocery_list_button', type: 'button'}
-.row.text-center	
-	= link_to "Cook", recipes_path(), {method: 'get', class: 'btn btn-default home_buttons', id: 'recipe_button', type: 'button'}
+%p.text-center
+	Welcome to Cucina, your virtual kitchen. It couldn't be simpler to get started
+	%br
+	%br
+	Have: your virtual cupboard
+	%br
+	%br
+	Need: your virtual grocery list
+	%br
+	%br
+	Cook: search the recipes you can make with 
+	%br
+	the ingredients in your cupboard. 
+	%br
+	%br
+	Got Questions? Hate us? Love us?  Email us at info@cookcucina.com
 
 
 

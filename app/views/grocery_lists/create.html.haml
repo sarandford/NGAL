@@ -7,5 +7,5 @@
 			.grocery_list_item
 				%input{type: 'checkbox', name: 'grocery_list_item', value: item.id }=item.food.name
 	.grocery_list_buttons
-		%button.btn#add_to_cupboard_button Bought it
-		%button.btn#delete_from_grocery_list_button Don't Actually Need It
+		%button.btn#add_to_cupboard_button.has_tooltip{"data-toggle" => "tooltip", title: "Add it to your cupboard"} Bought it
+		%button.btn#delete_from_grocery_list_button.has_tooltip{"data-toggle" => "tooltip", title: "Delete it from your grocery list but don't add it to your cupboard"} Don't Actually Need It

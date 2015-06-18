@@ -1,4 +1,7 @@
 $ ->
+	$(".has_tooltip").tooltip()
+
+
 	$(document).on "click","#food_add_button", ->
 		dairy_product = $("#food_input").val()
 		data = name: dairy_product

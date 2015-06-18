@@ -7,7 +7,7 @@
 			.cupboard_items
 				%input{type: 'checkbox', name: 'cupboard_item', value: item.id }=item.food.name
 	.delete_buttons
-		%button.btn.btn-lg.btn-info#delete_from_cupboard_button Used it
-		%button.btn.btn-lg.btn-warning#delete_from_cupboard_and_add_to_grocery_list_button Need more
+		%button.btn.btn-lg.btn-info.has_tooltip#delete_from_cupboard_button{"data-toggle" => "tooltip", title: "Delete it from your cupboard"} Used it
+		%button.btn.btn-lg.btn-warning.has_tooltip#delete_from_cupboard_and_add_to_grocery_list_button{"data-toggle" => "tooltip", title: "Add it to your grocery list"} Need more
 
 

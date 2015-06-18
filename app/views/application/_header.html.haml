@@ -1,4 +1,5 @@
 .header.cucina_home
+	%link{:href => "http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext", :rel => "stylesheet", :type => "text/css"}
 	.row
 		.col-xs-1.text-left
 			=link_to "Home", user_path((current_user.nil? ? 1 : current_user.id)), {class: 'btn btn-default home_buttons', id: 'home_button', method: 'get'}
