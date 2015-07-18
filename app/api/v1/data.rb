@@ -4,6 +4,21 @@ module V1
  		version 'v1', using: :path
  		format :json
 
+    resource :recipes do 
+
+      desc "get ingredients to search for recipes" 
+
+        params do 
+          requires :ingredients, type: String
+        end
+
+        get :search do
+          RestClient.get "http://food2fork.com/api/search?key=c3c2406305ef3e33c68210f57d5f0719&q=#{params[:ingredients]}"
+        end
+
+     
+    end
+
  		resource :users do 
  			
  		end
