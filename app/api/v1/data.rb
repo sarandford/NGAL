@@ -15,7 +15,8 @@ module V1
         get :search do
           safe_url = URI.encode("http://food2fork.com/api/search?key=c3c2406305ef3e33c68210f57d5f0719&q=#{params[:ingredients]}".strip)
 
-          RestClient.get safe_url
+          JSON.parse(RestClient.get safe_url)
+
         end
 
      
