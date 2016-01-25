@@ -1,1 +1,3 @@
-# NGAL
+# NGAL 
+
+This project was the result of a cross cultural, entrepreneurship course with participating students from the College of Charleston, Nebraska Wesleyan, and University of Tartu (Estonia). We worked in teams of three to combine interdisciplinary skills to develop a tech start up. I was the technical brains behind the project and used Ruby on Rails and the Food2fork api to make this recipe search engine and cupboard inventory system. Our team lacked design skills and time which contributes to the clumsy design of the website. It was intended to be a minimum viable product. It is a project I hope to be able to continue at some point when course and work schedule permits. 
